@@ -20,42 +20,21 @@
             </thead>
             <tbody>
 
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>18</td>
-                <td>男</td>
-                <td>2016-01-01</td>
-                <td>
-                    <a href="">详情</a>
-                    <a href="">修改</a>
-                    <a href="">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>18</td>
-                <td>男</td>
-                <td>2016-01-01</td>
-                <td>
-                    <a href="">详情</a>
-                    <a href="">修改</a>
-                    <a href="">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>18</td>
-                <td>男</td>
-                <td>2016-01-01</td>
-                <td>
-                    <a href="">详情</a>
-                    <a href="">修改</a>
-                    <a href="">删除</a>
-                </td>
-            </tr>
+            @foreach($students as $student)
+                <tr>
+                    <th scope="row">{{$student->id}}</th>
+                    <td>{{$student->name}}</td>
+                    <td>{{$student->age}}</td>
+                    <td>{{$student->sex}}</td>
+                    <td>{{$student->updated_at}}</td>
+                    <td>
+                        <a href="">详情</a>
+                        <a href="">修改</a>
+                        <a href="">删除</a>
+                    </td>
+                </tr>
+            @endforeach
+
             </tbody>
         </table>
     </div>
